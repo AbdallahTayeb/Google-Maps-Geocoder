@@ -1,0 +1,25 @@
+name: Exécuter le geocoder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+    - name: Configurer Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Installer les dépendances
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Exécuter le script
+      run: python geocoder.py
