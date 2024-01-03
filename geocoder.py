@@ -15,7 +15,7 @@ def geocode(address, api_key):
         return None
 
 def main():
-    api_key = "AIzaSyAWleiqf9yo0ZsMbIy2WBfMhPZ5b_30qOo"
+    api_key = ""
     address = "Webitech, FRANCE"
 
     result = geocode(address, api_key)
