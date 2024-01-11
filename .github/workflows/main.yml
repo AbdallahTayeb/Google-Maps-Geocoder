@@ -23,5 +23,5 @@ jobs:
 
     - name: Exécuter le script
       env:
-      MAPS_KEY: ${{ secrets.MAPS_KEY }}
+        MAPS_KEY: ${{ secrets.MAPS_KEY }}
       run: python geocoder.py
