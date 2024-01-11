@@ -22,4 +22,6 @@ jobs:
         pip install -r requirements.txt
 
     - name: Exécuter le script
+      env:
+      MAPS_KEY: ${{ secrets.MAPS_KEY }}
       run: python geocoder.py

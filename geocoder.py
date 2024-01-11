@@ -1,5 +1,7 @@
+import os
 import requests
 import json
+
 
 def geocode(address, api_key):
     """Fonction pour géocoder une adresse en utilisant l'API Google Maps."""
@@ -15,7 +17,7 @@ def geocode(address, api_key):
         return None
 
 def main():
-    api_key = ""
+    api_key = os.environ['MAPS_KEY']
     address = "Webitech, FRANCE"
 
     result = geocode(address, api_key)
